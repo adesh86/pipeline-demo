@@ -7,8 +7,8 @@ trigger:
 - master
 
 pool:
-  name: 'default'
-  vmImage: 'selfhostedagent'
+  #name: 'default'
+  vmImage: 'windows-latest'
 
 variables:
   solution: '**/*.sln'
@@ -33,3 +33,5 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: WhiteSource@21
